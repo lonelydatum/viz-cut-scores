@@ -1,0 +1,212 @@
+@import url(leaflet.css);
+
+path {
+  fill: #000;  
+  stroke: #fff;
+  stroke-width: .8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+	margin: 0px;
+	font-family: "Courier New", Courier, monospace
+}
+
+.twitter-share-button, .fb-like, .google-button,  .pin-it-button{
+	float: left;
+}
+.fb-like, .pin-it-button{
+	padding-right: 30px;
+}
+
+
+
+#share{	
+	padding-left: 55px;
+}
+
+#map_container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1840px;
+	z-index: 0;
+	padding: 10px;
+}
+.subject{	
+	float: left;
+	margin-right: 10px;
+	visibility: hidden;
+}
+.map{
+	width: 600px;
+	height: 600px;	
+}
+
+
+/* information begin */
+#infoToggle{
+	//border: solid 1px #E0E0E0;
+	position: fixed;
+	width:800px;
+	background-color: rgba(255,255,255, .92);
+	z-index: 9999;
+	color: #111;
+	font-size: .8em;
+	padding: 0px;
+	margin: 0px;
+	
+}
+
+#infoToggle #conent{
+	margin: 0px;
+}
+#infoToggle #conent h3{
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0px;	
+	background-color: rgba(55,55,55, .92);	
+	color:white;
+}
+#infoToggle #conent p{
+	padding: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0px;		
+}
+#infoToggle #conent ol, #infoToggle #conent p{	
+	font-size: 1em;
+	color: #111111;
+	width: 85%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#infoToggle #conent h2, #infoToggle #conent p{	
+	margin: 0px;
+}
+#infoToggle #conent{	
+	
+}
+
+#infoToggle #btn{
+	padding-bottom: 6px;
+	padding-top: 15px;
+	clear:both;
+	text-align: center;
+}
+#credit{
+	background-color: #eae8e8;
+	padding: 5px;
+	font-size: .8em;	
+	text-align: right;
+	color: #6f6f6f;
+}
+/* information end */
+
+
+
+
+
+
+/* List of districts begin */
+.list_row{	
+	cursor: default;
+	margin-left: auto;
+	margin-right: auto;
+	width: 550px;	
+	padding: 0px;
+
+}
+.list_row p{
+	margin: 0px;
+}
+.list_score{
+	
+	float: left;	
+	width: 150px;
+	clear: both;
+	margin: 0px;
+}
+
+.list{
+	margin-top: 7px;
+	overflow: auto;
+	height:200px;	
+}
+.list .list_row{
+	font-size: .75em;
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+
+
+#list_header{
+	cursor: pointer;
+	
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#sort_score{
+	float: left;	
+	width: 150px;
+	
+}
+#sort_district{	
+	
+	width: 350px;
+	overflow: auto;
+}
+
+.listItem{
+	margin: 0px;
+}
+.sort_icon{
+	padding-right: 8px;
+}
+
+#sort_district .sort_icon{
+	display: none;
+}
+
+select{
+	width: 600px;
+}
+
+
+
+#styleOn{
+	background-color: purple;
+}
+
+#styleOff{
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What educational policy change looks like</title>
+	<link rel="stylesheet" href="leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+	<link rel="stylesheet" href="screen.css" />
+	<link rel="stylesheet" href="style.css" />
+	
+	
+
+
+
+	<meta property="og:title" content="What educational policy change looks like" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://lonelydatum.com/visualize/cut-scores/" />
+<meta property="og:image" content="http://lonelydatum.com/assets/images/cut-scores.png" />
+<meta property="og:site_name" content="Lonely Datum" />
+<meta property="fb:admins" content="100002314154742" />
+
+
+</head>
+
+<body>
+
+	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+	<!-- <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=223656951010357";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+
+	<div id="infoToggle">		
+		<div id="conent">			
+			<h3>In Fall of 2011, the Michigan State Board of Education increased the minimum score needed on the state test (Michigan Educational Assessment Program or MEAP) to be considered "proficient" per subject area.</h3> 
+			<p>The impact of this change varied from district to district and across subjects, as can be seen in the maps above. The monochromatic color-coding (dark to light) shows that the greater the percentage drop in proficiency rates (based on Fall 2010, old to new cut scores), the darker the shading. The lower the drop, the lighter the shading. Shading per percentage drop is absolute across subjects. For example, there appears to be less contrast on the reading map because there was a considerably smaller range of percentage decreases compared to other subjects (math and science).<br/><br/>
+				There were several factors that impacted the degree to which a district dropped in proficiency rate. The main factors were:
+			</p>
+			<ol>
+				<li>If a district had a lot of students "on the bubble" or just above the previous cut score, then their former percent proficient dropped in tandem with the number of scores in that range.</li>
+				<li>If a district had a lot of students scoring way above the former cut score, then their proficiency rate would not drop as much.</li>
+				<li>If a district had a  lot of students already scoring below the former cut score, then their low proficiency rate would not get much lower (as much).</li>
+				<li>If a district had a small number of students (i.e. a rural district), their proficiency rate will drop a lot or a little simply due the small amount of scores in the calculation.</li>
+			</ol>
+
+
+<div id="share">	
+<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Flonelydatum.com%2Fvisualize%2Fcut-scores%2F&media=http%3A%2F%2Flonelydatum.com%2Fassets%2Fimages%2Fcut-scores.png&description=What%20educational%20policy%20change%20looks%20like." class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+	
+
+<div class="fb-like" data-href="http://lonelydatum.com/visualize/cut-scores" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="What educational policy change looks like. #Michigan" data-via="lonelydatum">Tweet</a>
+
+<div class="google-button"><g:plusone></g:plusone></div>
+</div>   		
+			
+		</div>
+		<div id="btn"><a href="#" id='toggle'>HIDE</a></div>
+		<div id='credit'>By Gar Liu in collaboration with Michael Lance.</div>
+	</div>
+	<div id="map_container">
+		<div id="reading" class="subject">
+			<div id="map_reading" class="map"></div>
+			<select>
+				<option value="Reading">Reading</option>
+				<option value="Math">Math</option>
+				<option value="Science">Science</option>
+			</select>	
+			<div class="subject_title"></div>
+			<div id="list_header"><p id="sort_score" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>% decrease</p><p id="sort_district" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>School District</p></div>
+			<div class="list"></div>
+		</div>
+		<div id="math" class="subject">
+			<div id="map_math" class="map"></div>
+			<select>
+				<option value="Reading">Reading</option>
+				<option value="Math">Math</option>
+				<option value="Science">Science</option>
+			</select>	
+			<div class="subject_title"></div>
+			<div id="list_header"><p id="sort_score" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>% decrease</p><p id="sort_district" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>School District</p></div>
+			<div class="list"></div>
+		</div>		
+		<div id="science" class="subject">
+			<div id="map_science" class="map"></div>
+			<select>
+				<option value="Reading">Reading</option>
+				<option value="Math">Math</option>
+				<option value="Science">Science</option>
+			</select>
+			<div class="subject_title"></div>
+			<div id="list_header"><p id="sort_score" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>% decrease</p><p id="sort_district" class="listItem"><img class="sort_icon" src="assets/images/sort.gif"/>School District</p></div>
+			<div class="list"></div>
+		</div>		
+	</div>
+	
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/signal.js"></script>
+	<script src="http://d3js.org/d3.v2.min.js?2.9.3"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>	
+
+	<script src="js/justGrades.js"></script>
+	  
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			
+			var infoToggle = $('#infoToggle');
+			var signal = { 
+				over: 					new signals.Signal(),
+				out: 					new signals.Signal(),
+				subjectChange: 			new signals.Signal(),				
+				zoomIn:					new signals.Signal(),
+				zoomOut:				new signals.Signal()
+			}
+
+			var styles = {
+				math:{ map: "#e7c6c6", dark: "#401414", bright: "#fa18d2" },
+				reading:{ map: "#a8cbcc", dark: "#3c6364", bright: "#0eedf4" },
+				science:{ map: "#a6bf88", dark: "#3B4F20", bright: "#8ef50b" }
+			}
+
+			
+			$("#toggle").click(toggle);
+			centerToggle();
+
+			function toggle(){				
+				if($("#toggle").text() == "HIDE"){					
+					hideInfo();
+				}else if($("#toggle").text() == "SHOW"){					
+					showInfo();
+				}
+				centerToggle();
+				return false;
+			}
+
+			function showInfo(){
+				$('.subject').animate({opacity:.15}, 500);
+				$("#toggle").html("HIDE");
+				infoToggle.css("width", "800px");
+				$("div#conent").show();
+				$("div#credit").show();
+			}
+
+			function hideInfo(){
+				if($('.subject').css('opacity')<1){
+					$('.subject').animate({opacity:1});
+				}
+				$("#toggle").html("SHOW");
+				infoToggle.css("width", "100px");
+				$("div#conent").hide();
+				$("div#credit").hide();
+			}
+						
+			function centerToggle(){
+				var leftPos = ($(window).width() - parseInt($("#infoToggle").css("width"))) * .5;
+				infoToggle.css("left", leftPos)
+			}
+
+
+			$.getJSON('js/list_.json', function(d){				
+				collection = d;				
+				
+				transIn();
+				console.log(this);
+				var mapMath = new MapCourse( "math", signal, styles );
+				var mapReading = new MapCourse( "reading", signal, styles );			
+				var mapScience = new MapCourse( "science", signal, styles );	
+				
+			});
+
+
+			function transIn(){
+				
+				infoToggle.css('top', '-'+infoToggle.css('height'));				
+				infoToggle.show();
+				infoToggle.animate({top:0}, 2000);
+
+				$('.subject').css('visibility', 'visible');
+				$('.subject').css('opacity', .15);				
+			}
+
+
+
+			d3.selection.prototype.moveToFront = function() { 
+		    	if(!$.browser.msie || $.browser.msie==undefined){    		
+		    		return this.each(function() { 
+						this.parentNode.appendChild(this); 
+					}); 	
+		    	}
+			}; 
+			
+
+		})
+
+		var collection;
+		
+		
+		
+
+</script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-34982715-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+</body>
+
+	
+		
+	
+	
+	
+	<script src="mapD3.js"></script>	
+	<script src="mapCourse.js"></script>	
+	<script src="list.js"></script>	
+
+
+</html>
